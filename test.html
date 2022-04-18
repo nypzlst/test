@@ -86,14 +86,14 @@
             cache:'default'
         };
 
-        let MyRequest = new Request(" https://alarmmap.online/assets/alerts.json",myInit);
+        
+        const RequestUrl ='https://alarmmap.online/assets/alerts.json'
 
-        fetch(MyRequest)
-            .then(function(resp){
-                return resp.json();
-            })
-            .then(function(data){
-                console.log(data.alerts);
-            });
+
+        const xhr =new XMLHttpRequest()
+
+        xhr.open('GET',RequestUrl)
+
+        xhr.send()
 
 </script>
